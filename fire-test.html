@@ -1,0 +1,40 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/polymerfire/polymerfire.html">
+<dom-module id="fire-test">
+  <template>
+    <style>
+      /* local DOM styles go here */
+      :host {
+
+      }
+    </style>
+    <!-- local DOM goes here -->
+
+    <template id="firebase" is="dom-bind">
+      <firebase-app
+          auth-domain="koatest.firebaseapp.com"
+          database-url="https://koatest.firebaseio.com"
+          api-key="AIzaSyANxt-hXcUf8PB0Tw1eFIB9qgby2Cmi-7w"></firebase-app>
+      <firebase-query
+          path="/rss"
+          data="{{rss}}">
+      </firebase-query>
+
+
+
+      <script>
+      setTimeout(function () {
+        var fb = document.querySelector('#firebase');
+        console.log("[ITEM]",fb.rss);
+      }, 3000);
+
+      </script>
+    </template>
+
+  </template>
+  <script>
+  Polymer({
+    is: 'fire-test',
+  });
+  </script>
+</dom-module>

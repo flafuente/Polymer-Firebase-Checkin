@@ -1,0 +1,23 @@
+{
+  "name": "polymer-firebase-checkin",
+  "homepage": "https://github.com/flafuente/polymer-firebase-checkin",
+  "authors": [
+    "Fernando Lafuente Saiz <fernandolafuentesaiz@gmail.com>"
+  ],
+  "description": "",
+  "main": "polymer-firebase-checkin.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.0",
+    "geo-location": "^1.0.5",
+    "google-map": "GoogleWebComponents/google-map#^1.1.10",
+    "polymerfire": "^0.9.4"
+  }
+}

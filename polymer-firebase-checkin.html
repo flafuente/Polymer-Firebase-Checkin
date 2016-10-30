@@ -1,0 +1,33 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/geo-location/geo-location.html">
+<link rel="import" href="bower_components/google-map/google-map.html">
+<link rel="import" href="bower_components/google-map/google-map-marker.html">
+<dom-module id="polymer-firebase-checkin">
+  <template>
+    <style>
+      /* local DOM styles go here */
+      :host {
+
+      }
+      google-map {
+        height: 300px;
+        width:100%;
+      }
+    </style>
+    <!-- local DOM goes here -->
+
+<!-- INPUT + Firebase  -->
+    <input type="button" name="name" value="">
+
+    <geo-location watch-pos latitude="{{latitude}}" longitude="{{longitude}}"></geo-location>
+    <google-map latitude="[[latitude]]" longitude="[[longitude]]" fit-to-markers>
+      <google-map-marker latitude="{{latitude}}" longitude="{{longitude}}" draggable="false"></google-map-marker>
+    </google-map>
+
+  </template>
+  <script>
+  Polymer({
+    is: 'polymer-firebase-checkin',
+  });
+  </script>
+</dom-module>

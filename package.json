@@ -1,0 +1,24 @@
+{
+  "name": "polymer-firebase-checkin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://flafuente@github.com/flafuente/polymer-firebase-checkin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flafuente/polymer-firebase-checkin/issues"
+  },
+  "homepage": "https://github.com/flafuente/polymer-firebase-checkin#readme"
+}

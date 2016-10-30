@@ -1,0 +1,34 @@
+'use strict';
+
+var gulp = require('gulp');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+
+var serve = function(baseDir) {
+  browserSync({
+    port: 9001,
+    notify: false,
+    logPrefix: 'KOA',
+    snippetOptions: {
+      rule: {
+        match: '<span id="browser-sync-binding"></span>',
+        fn: function(snippet) {
+          return snippet;
+        }
+      }
+    },
+    server: {
+      baseDir: baseDir,
+      middleware: function(req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    }
+  });
+};
+
+// Serve project and watch files for changes
+gulp.task('serve', [], function() {
+  serve();
+  gulp.watch(['*'], reload);
+});
